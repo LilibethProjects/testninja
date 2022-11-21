@@ -1,0 +1,21 @@
+.container{
+  background: linear-gradient(140deg, #EADEDB 0%, #BC70A4 50%, #BFD641 75%);
+}
+h4{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-weight: bold;
+}
+button{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  border-radius: 50px;
+  width: 100px;
+  background: black;
+  color: #fff;
+  margin-bottom: 20px;
+}
+label{
+  color: black;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+}

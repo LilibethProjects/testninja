@@ -1,0 +1,43 @@
+<ng-template #modalConfirm>
+  <div class="modal-body">
+      <div class="modal_confirm">
+          <p class="delete-text">¿Está seguro que quiere eliminar el usuario {{user?.name}}?</p>
+          <div class="content-buttons">
+            <button type="button" class="button-delete" (click)="deleteUser()">ELIMINAR</button>
+            <button type="button" class="button-cancel" (click)="cerrarModalConfirm()">CANCELAR</button>
+          </div>
+      </div>
+  </div>
+</ng-template>
+<div class="content-users list-users">
+  <h1>USUARIOS</h1>
+      <div *ngFor=" let user of listUsers" class="list-users" >
+          <div class="row container-users">
+            <div class="col-md-6">
+                <img src="/assets/images/edit.png" (click)="showEditUser(user)" class="edit-trash" >
+                <img src="/assets/images/trash.png" (click)="openConfirm(modalConfirm,  user)">
+                <img class="cont-img-user" src="/assets/images/user.png">
+                <label >Nombre: </label>{{user.name}}
+            </div>
+            <div class="col-md-6">
+                <img class="cont-img-email" src="/assets/images/email.png">
+                <label >E-mail: </label>{{user.email}}
+            </div>
+         </div>
+          <div class="bubbles">
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+              <div class="bubble"></div>
+          </div>
+      </div>
+      <div class="content-create">
+          <img src="/assets/images/create.png" (click)="addUser()"> CREAR
+      </div>
+</div>
